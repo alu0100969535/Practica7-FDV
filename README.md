@@ -18,6 +18,8 @@ Se ha usado un sistema de pooling para los enemigos. Ver [GameObjectPool.cs](Ass
 
 Además de esto, se ha puesto un sistema de colliders en los bordes de la cámara, para que el jugador sólo pueda estar en la zona visible. ver [CameraLimits.cs](Assets/Scripts/CameraLimits.cs)
 
+![](img/backgroundMovement.gif)
+
 ## 2. Scroll con movimiento del personaje. El fondo se repite hasta que pare el juego.
 
 Esta tarea de ha realizado en la escena [CameraMovement.unity](Assets/Scenes/CameraMovement.unity).
@@ -25,6 +27,8 @@ Esta tarea de ha realizado en la escena [CameraMovement.unity](Assets/Scenes/Cam
 Se ha utilizado [RendererScreen.cs](Assets/Scripts/CameraMovementScene/RendererScreen.cs) que es similar al anterior usado pero sin scroll automático.
 
 Esta vez se mueve la cámara siguiendo al player usando el script [GameObjectFollower.cs](Assets/Scripts/CameraMovementScene/GameObjectFollower.cs) que tiene un funcionamiento similar a poner la cámara como hija del player, pero con más control sobre que axis queremos que siga.
+
+![](img/cameraMovement.gif)
 
 ## 3. Fondo con efecto parallax. El efecto empieza cuando el jugador empieza a moverse, esto se debe comunicar mediante eventos.
 
@@ -36,8 +40,11 @@ Se ha utilizado [RendererScreen.cs](Assets/Scripts/CameraMovementScene/RendererS
 
 En este caso la cámara sigue al player de la misma manera que en la tarea anterior.
 
+![](img/paralaxMovement.gif)
+
 ## 4. Utilizar la técnica de pool de objetos para ir creando elementos en el juego sobre los que debe saltar el jugador evitándolos o para adquirir puntos si salta sobre ellos.
 
 Se ha utilizado [EnemiesManager.cs](Assets/Scripts/BackgroundMovement/EnemiesManager.cs) en la primera escena para demostrar su uso.
 
 ![](img/play.PNG)
+![](img/pooling.gif)
